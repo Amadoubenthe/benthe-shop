@@ -13,28 +13,35 @@ export const actions = {
 * action creators
 */
 const uid = () => Math.random().toString(34).slice(2)
-console.log(uid);
+
+// const uid = () => Math.floor(Math.random() * (max - min)) + min
+
+// const uid = () => Math.floor(Math.random())
+
+
+console.log(uid());
 export function addToCart(item, quantity) {
     return {
         type: actions.ADD_TO_CART,
-        payload: { id: uid, quantity:quantity, details: item }
+        payload: { id: uid(), quantity: quantity, details: item }
     }
 }
 
-export function updateCart(item, quantity) {
+export function updateCart(id, quantity) {
     return {
         type :actions.UPDATE_CART,
-        payload: {item: item, quantity},
+        payload: {id: id, quantity: quantity},
     }
 }
 
 
-export function removeFromCart(item) {
+export function removeFromCart(id) {
     return {
         type: actions.REMOVE_FROM_CART,
-        payload: item
+        payload: id
     }
 }
+
 
 
 

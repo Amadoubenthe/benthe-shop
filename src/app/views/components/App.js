@@ -44,6 +44,10 @@ const App = (props) => {
     console.log(isFiltring);
   })
 
+  const add = (item, quantity) => {
+    onAddToCart(item, quantity)
+  }
+
   const update = () => {
     console.log("update");
   }
@@ -60,12 +64,13 @@ const App = (props) => {
                                                   category={category}  
                                                   loadCategory={loadCategory}
                                                   updateToCart={update}
-                                                  list={list} 
+                                                  list={list}
+                                                  addToCart={add}
                                                   isFiltring={isFiltring} 
                                                   filtred={filtred}
                                                 /> 
         }/>
-        <Route path="/Cart" component={CartPage} />
+        <Route path="/cart" component={CartPage} />
             
       </Router>
     </>
