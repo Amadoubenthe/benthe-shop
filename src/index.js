@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { store } from './app/lib/store';
 import { Provider } from 'react-redux';
-import { addToCart } from './app/lib/actions';
 import { AppContainer } from './app/views/containers/index';
 
 // Log the initial state
